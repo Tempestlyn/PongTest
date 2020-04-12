@@ -42,7 +42,7 @@ public class PlayerControls : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(0);
         }
 		
 		m_rb2d.velocity = vel;
