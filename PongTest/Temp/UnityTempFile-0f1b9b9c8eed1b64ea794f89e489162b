@@ -297,6 +297,8 @@
 /define:ENABLE_VSTU
 /define:CSHARP_7_OR_LATER
 /define:CSHARP_7_3_OR_NEWER
-Assets\BallController.cs
-Assets\GameController.cs
-Assets\PlayerControls.cs
+Assets\Scripts\AIController.cs
+Assets\Scripts\BallController.cs
+Assets\Scripts\GameController.cs
+Assets\Scripts\MenuManager.cs
+Assets\Scripts\PlayerControls.cs

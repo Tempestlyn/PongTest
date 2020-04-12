@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class PlayerControls : MonoBehaviour {
 
 	public KeyCode moveUp = KeyCode.W;
@@ -7,6 +7,7 @@ public class PlayerControls : MonoBehaviour {
 	public float speed = 10.0f;
 	public float boundY = 2.25f;
 	private Rigidbody2D m_rb2d;
+
 
     public GameObject ball;
     private BallController ballController;
@@ -22,21 +23,27 @@ public class PlayerControls : MonoBehaviour {
 	
 	private void Update () 
 	{
-		var vel = m_rb2d.velocity;
+
+
+        var vel = m_rb2d.velocity;
 		
-		if (Input.GetKey (moveUp)) 
-		{
-            
+		if (Input.GetKey(moveUp)) 
+		{    
             vel.y = speed;
 		} 
-		else if (Input.GetKey (moveDown)) 
-		{
+		else if (Input.GetKey(moveDown))
+        {
 			vel.y = -speed;
 		} 
-		else if (!Input.anyKey) 
+		else if (!Input.anyKey)
 		{
-			vel.y = 0;
+            vel.y = 0;
 		}
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene(1);
+        }
 		
 		m_rb2d.velocity = vel;
 
