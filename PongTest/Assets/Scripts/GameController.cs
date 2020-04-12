@@ -20,6 +20,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        score1 = 0;
+        score2 = 0;
         ball = GameObject.FindGameObjectWithTag("Ball");
         ballController = ball.GetComponent<BallController>();
         
